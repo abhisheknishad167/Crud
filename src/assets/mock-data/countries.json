@@ -1,0 +1,28 @@
+{
+  "post": [
+    {
+      "id": "3",
+      "name": "Rohan",
+      "email": "rohan@gmail.com",
+      "dob": "2000-04-30",
+      "country": "India",
+      "avatar": "avatar1"
+    },
+    {
+      "id": "4",
+      "name": "Gaurav Shinde",
+      "email": "Gaurav@gmail.com",
+      "dob": "1998-09-26",
+      "country": "India",
+      "avatar": "avatar1"
+    },
+    {
+      "id": "5",
+      "name": "Abhishek Nishad",
+      "email": "abhisheknishad@gmail.com",
+      "dob": "1997-09-26",
+      "country": "India",
+      "avatar": "avatar1"
+    }
+  ]
+}

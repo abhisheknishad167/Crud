@@ -1,0 +1,15 @@
+<p-panel>
+  <p-header>
+    Country details
+  </p-header>
+  <div class="p-d-flex" *ngIf="country">
+    <div class="p-m-4">Country Name: {{country.name}}</div>   
+    <div class="p-m-4">Email: {{country.email}}</div>
+    <div class="p-m-4">Country: {{country.country}}</div>
+    <div class="p-m-4">Avatar: {{country.avatar}}</div>
+    <div class="p-m-4">Date of Birth: {{country.dob}}</div>
+  </div>
+  <p-footer>
+    <a [routerLink]="goBackUrl">Go back</a>
+  </p-footer>
+</p-panel>

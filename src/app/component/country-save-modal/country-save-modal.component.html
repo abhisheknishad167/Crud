@@ -1,0 +1,81 @@
+<form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+
+ 
+
+  <div class="p-grid">
+    <div class="p-col p-field p-grid p-m-4 p-p-4">
+      <label for="id" class="p-col-fixed" style="width:100px">Id</label>
+      <div class="p-col">
+        <input id="id" type="text" formControlName="id" pInputText required autofocus>
+      </div>
+    </div>
+
+
+    <div class="p-col p-field p-grid p-m-4 p-p-4">
+      <label for="name" class="p-col-fixed" style="width:100px">Name</label>
+      <div class="p-col">
+        <input id="name" type="text" formControlName="name" pInputText required autofocus>
+      </div>
+    </div>
+
+   
+    <!-- Additional fields for email, dob, country, and avatar -->
+    
+
+    <div class="p-col p-field p-grid p-m-4 p-p-4">
+      <label for="dob" class="p-col-fixed" style="width:100px">Date of Birth</label>
+      <div class="p-col">
+        <input id="dob" type="date" formControlName="dob" required autofocus>
+      </div>
+    </div>
+    
+
+    <div class="p-col p-field p-grid p-m-4 p-p-4">
+      <label for="country" class="p-col-fixed" style="width:100px">Country</label>
+      <div class="p-col">
+        <input id="country" type="text" formControlName="country" pInputText required autofocus>
+      </div>
+    </div>
+    
+
+    
+    <div class="p-col p-field p-grid p-m-4 p-p-4">
+      <label for="email" class="p-col-fixed" style="width:100px">Email</label>
+      <div class="p-col">
+        <input id="email" type="email" formControlName="email" pInputText required autofocus>
+      </div>
+    </div>
+
+    <div class="p-col p-field p-grid p-m-4 p-p-4" style="display: none">
+      <label for="avatar" class="p-col-fixed" style="width:100px">Avatar</label>
+      <div class="p-col">
+
+        <input id="avatar" type="text" formControlName="avatar" pInputText required autofocus>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col p-field p-grid p-m-4 p-p-4">
+    <label for="avatar" class="p-col-fixed" style="width:100px">Avatar</label>
+    <div class="p-col">
+      <div class="custom-dropdown" id="avatarDropdown">
+          <img src="../../assets/avatars/avatar1.jpg" alt="Avatar 1" class="avatar-thumbnail" style="width: 50px; height: 50px;">
+          <span class="caret"></span>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+ 
+  
+
+
+
+  <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+  <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" type="submit"
+          [disabled]="!countryForm.valid"></button>
+
+</form>

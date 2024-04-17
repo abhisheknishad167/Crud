@@ -1,0 +1,90 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  
+    &-header {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    &-body {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+  
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+  
+      button {
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+
+
+  .card-body-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .card-body-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  
+    i {
+      margin-right: 0.5rem;
+      color: #6c757d; // Change this to your desired icon color
+    }
+  }
+
+
+  .card-body-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .card-body-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem; // Increase the font size
+  
+    i {
+      margin-right: 0.5rem;
+      color: #6c757d;
+      font-size: 1.2rem; // Increase the icon size
+    }
+  
+    span {
+      font-weight: 500; // Add some weight to the text
+    }
+  }
+
+  .avatar-img {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    margin-right: 10px; /* Adjust spacing between image and text */
+    border-radius: 50%; /* Make the image round */
+    overflow: hidden; /* Hide overflow content to ensure round shape */
+  }
+  
+
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-title {
+    margin: 0; /* Remove default margin */
+  }
