@@ -6,7 +6,7 @@
     "start": "ng serve",
     
     "build": "ng build",
-    "server": "json-server --watch ./src/assets/mock-data/countries.json --port 8000",
+  
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
