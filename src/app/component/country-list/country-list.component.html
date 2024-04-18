@@ -1,6 +1,7 @@
 <p-toast></p-toast>
-
-<p-toolbar styleClass="p-mb-4">
+<div  *ngIf="showProgressBar" class="spinner-overlay">
+  <p-progressSpinner  [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="rgba(66,66,66,0.1)" animationDuration=".5s"></p-progressSpinner>
+</div><p-toolbar styleClass="p-mb-4">
   <ng-template pTemplate="left">
     <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2"
             (click)="openCreateModal()"></button>

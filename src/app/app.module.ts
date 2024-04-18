@@ -27,7 +27,7 @@ import { AgePipe } from './age.pipe';
 import { NameFilterPipe } from './name-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { CountryCardComponent } from './country-card/country-card.component';
-
+import { ProgressSpinnerModule } from 'primeng/progressspinner'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +59,9 @@ import { CountryCardComponent } from './country-card/country-card.component';
     DynamicDialogModule,
     AccordionModule,
     PanelModule,
-    FormsModule 
+    FormsModule,
+    ProgressSpinnerModule
+    
   ],
   providers: [MessageService, DialogService],
   bootstrap: [AppComponent]

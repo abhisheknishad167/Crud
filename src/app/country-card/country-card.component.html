@@ -1,44 +1,28 @@
 <p-card (click)="openEditModal(country)">
-    <ng-template pTemplate="header">
-        <div class="header-container">
-          <img [src]="'../../assets/avatars/avatar1.jpg'" alt="Avatar" class="avatar-img">
-          <h1 class="header-title">{{ country.name }}</h1>
-        </div>
-      </ng-template>
-      
-    <ng-template pTemplate="body">
-      <div class="card-body-grid">
-        <div class="card-body-item">
-          <i class="pi pi-envelope"></i>
-          <span>{{ country.email }}</span>
-        </div>
-        <div class="card-body-item">
-          <i class="pi pi-globe"></i>
-          <span>{{ country.country }}</span>
-        </div>
-        
-
-
-        <div class="card-body-item">
-          <i class="pi pi-calendar"></i>
-          <span>{{ country.dob.toString() |age }}</span>
-        </div>
+  <ng-template pTemplate="header">
+    <div class="header-container">
+      <img [src]="'../../assets/avatars/avatar1.jpg'" alt="Avatar" class="avatar-img">
+      <h1 class="header-title truncate">{{ country.name }}</h1>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="body">
+    <div class="card-body-grid">
+      <div class="card-body-item">
+        <i class="pi pi-envelope"></i>
+        <span class="truncate">{{ country.email }}</span>
       </div>
-    </ng-template>
-    <ng-template pTemplate="footer">
-      <button
-        pButton
-        pRipple
-        icon="pi pi-pencil"
-        class="p-button-rounded p-button-success p-mr-2"
-        (click)="editCountry.emit(country); $event.stopPropagation()"
-      ></button>
-      <button
-        pButton
-        pRipple
-        icon="pi pi-trash"
-        class="p-button-rounded p-button-danger"
-        (click)="deleteCountry.emit(country); $event.stopPropagation()"
-      ></button>
-    </ng-template>
-  </p-card>
+      <div class="card-body-item">
+        <i class="pi pi-globe"></i>
+        <span class="truncate">{{ country.country }}</span>
+      </div>
+      <div class="card-body-item">
+        <i class="pi pi-calendar"></i>
+        <span>{{ country.dob.toString() | age }}</span>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="editCountry.emit(country); $event.stopPropagation()"></button>
+    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deleteCountry.emit(country); $event.stopPropagation()"></button>
+  </ng-template>
+</p-card>

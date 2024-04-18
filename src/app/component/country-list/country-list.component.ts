@@ -19,6 +19,7 @@ export class CountryListComponent implements OnInit {
   countries: Country[];
   selectedCountry: Country;
   searchText: string = '';
+  showProgressBar: boolean = false;
   constructor(private countryService: CountryService, private router: Router, private primengConfig: PrimeNGConfig, private messageService: MessageService, public dialogService: DialogService) {
   }
 
@@ -36,7 +37,7 @@ export class CountryListComponent implements OnInit {
         });
       }
     });
-    this.refresh();
+    
   }
 
   deleteCountry(country: Country) {
@@ -54,7 +55,9 @@ export class CountryListComponent implements OnInit {
           this.messageService.add({severity: 'success', summary: 'Success', detail: 'Country created'});
         });
       }
+      this.refresh();
     });
+    this.refresh();
     
   }
 
@@ -65,6 +68,7 @@ export class CountryListComponent implements OnInit {
         this.countryService.update(country.id, country).subscribe(() => {
           this.messageService.add({severity: 'success', summary: 'Success', detail: 'Country updated'});
         });
+        this.refresh();
       }
     });
    this.refresh();
@@ -87,10 +91,13 @@ export class CountryListComponent implements OnInit {
 
 
   refresh(){
+    this.showProgressBar = true;
     const timer$ = timer(10000);
     timer$.subscribe(() => {
       this.ngOnInit();
+      this.showProgressBar = false;
     });
+   
   }
   
 }
