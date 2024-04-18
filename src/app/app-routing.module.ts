@@ -6,9 +6,7 @@ import {CountryListComponent} from './component/country-list/country-list.compon
 import {CountryDetailsComponent} from './component/country-details/country-details.component';
 
 const routes: Routes = [
-  {path: 'countries', component: CountryListComponent},
-  {path: 'countries/:id', component: CountryDetailsComponent},
-  {path: '**', redirectTo: '/countries'}
+
 ];
 
 @NgModule({
